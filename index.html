@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GoTravel - Login (Pink Edition)</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery + jQuery Mobile -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- jQuery Mobile page wrapper -->
+  <div data-role="page" id="loginPage" class="page-bg">
+
+    <div data-role="header" class="header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="brand">
+          <img src="logo.jpg" alt="GoTravel Logo" class="logo-img mb-2">
+<h1 class="text-pink fw-bold">GoTravel</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <div data-role="content" class="container content py-4">
+      <div class="card shadow-sm rounded-3 login-card">
+        <div class="card-body p-4">
+          <h2 class="card-title text-center mb-3">Welcome back</h2>
+          <p class="text-muted text-center small">Sign in to continue to GoTravel</p>
+
+          <form id="loginForm" novalidate>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input id="username" class="form-control" type="text" placeholder="your.username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" class="form-control" type="password" placeholder="••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-pink w-100 mb-2">Login</button>
+            <a href="#" class="btn btn-outline-secondary w-100 mt-1" id="guestBtn">Continue as Guest</a>
+          </form>
+
+          <div class="text-center mt-2">
+            <a href="#" id="forgotLink" class="small text-muted">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center mt-3 small text-muted">
+        © <span id="year"></span> GoTravel — Mobile Web App
+      </footer>
+    </div>
+
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal fade" id="forgotModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Reset Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Step 1: Enter username -->
+          <div id="fp-step1">
+            <p class="small text-muted">Enter your username to reset password.</p>
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input id="fp-username" class="form-control" type="text" placeholder="your.username">
+              <div class="invalid-feedback custom"></div>
+            </div>
+            <div class="d-grid">
+              <button id="fp-check" class="btn btn-pink">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Enter new password -->
+          <div id="fp-step2" style="display:none;">
+            <p class="small text-muted">Username found. Enter a new password.</p>
+            <div class="mb-3">
+              <label class="form-label">New password</label>
+              <input id="fp-newpass" class="form-control" type="password" placeholder="New password">
+              <div class="invalid-feedback custom"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm password</label>
+              <input id="fp-confpass" class="form-control" type="password" placeholder="Confirm password">
+              <div class="invalid-feedback custom"></div>
+            </div>
+            <div class="d-grid">
+              <button id="fp-reset" class="btn btn-pink">Reset Password</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="fp-cancel" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom script -->
+  <script src="script.js"></script>
+
+  <script>
+    // small helper to update year
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>

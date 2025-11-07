@@ -1,0 +1,167 @@
+/* 🌸 GoTravel Pink Edition - Elegant Pastel Theme */
+
+/* 🌷 General Page Layout */
+.page-bg {
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* 🌸 Theme Colors */
+.text-pink {
+  color: #d63384 !important;
+}
+
+/* 🌷 Logo Styling */
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto 12px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.25);
+  transition: 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.3);
+}
+
+/* 🌸 Card (Home, Booking, etc.) */
+.pastel-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #f8cdda;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(246, 173, 198, 0.25);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+.pastel-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(246, 173, 198, 0.3);
+}
+
+/* 🌷 Destination Mini Cards */
+.mini-card {
+  width: 30%;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.mini-card img {
+  height: 120px;
+  object-fit: cover;
+}
+.mini-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(246, 173, 198, 0.3);
+}
+
+/* 🌸 Buttons */
+.btn-pink {
+  background: linear-gradient(90deg, #f8cdda, #f6a5c0);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 10px rgba(246, 173, 198, 0.3);
+}
+.btn-pink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(214, 51, 132, 0.5);
+}
+
+/* 🌸 Footer Navigation Bar */
+.footer-nav {
+  background-color: rgba(255, 240, 245, 0.95);
+  border-top: 1px solid #f8cdda;
+  backdrop-filter: blur(6px);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer-nav .nav-link {
+  color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer-nav .nav-link:hover {
+  color: #d63384;
+  transform: scale(1.1);
+}
+.footer-nav .nav-link.active {
+  color: #d63384;
+  font-weight: 600;
+}
+.footer-nav .nav-link i {
+  font-size: 1.3rem;
+}
+
+/* 🌷 Booking Popup (Modal) - Timed Pastel Effect */
+.modal-content {
+  background: linear-gradient(180deg, #fff 0%, #ffe6ef 100%);
+  border: 2px solid #f8cdda;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(246, 173, 198, 0.4);
+  animation: popIn 0.4s ease;
+  transform-origin: center;
+}
+
+.modal-header h5 {
+  color: #d63384;
+  font-weight: 700;
+}
+.modal-body p {
+  font-size: 15px;
+}
+.modal-footer .btn-pink {
+  background: linear-gradient(90deg, #f8cdda, #f6a5c0);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(246, 173, 198, 0.4);
+  transition: 0.3s ease;
+}
+.modal-footer .btn-pink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(214, 51, 132, 0.5);
+}
+
+/* 🌈 Blur backdrop di belakang popup */
+.modal-backdrop.show {
+  background-color: rgba(255, 240, 245, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* 🌟 Animasi popup timbul */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🌸 Carousel captions */
+.carousel-caption {
+  background: rgba(255, 240, 245, 0.8);
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(246, 173, 198, 0.3);
+}
+
+/* 🌷 Responsive adjustments */
+@media (max-width: 768px) {
+  .mini-card {
+    width: 45%;
+  }
+  .logo-img {
+    height: 90px;
+  }
+  .footer-nav .nav-link i {
+    font-size: 1.1rem;
+  }
+}
